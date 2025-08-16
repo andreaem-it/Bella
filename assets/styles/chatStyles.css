@@ -1,0 +1,569 @@
+/* ===== STILI CHAT INTERFACE BELLA AI ===== */
+
+/* --- Container principale chat --- */
+.bella-chat-container {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 400px;
+    height: 520px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bella-chat-container.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: all;
+}
+
+/* --- Header chat --- */
+.bella-chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    border-radius: 16px 16px 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bella-chat-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bella-avatar {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bella-title-text h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.bella-status {
+    font-size: 12px;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bella-status::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #4CAF50;
+    border-radius: 50%;
+    animation: pulse-status 2s infinite;
+}
+
+@keyframes pulse-status {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.bella-chat-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.bella-chat-controls button {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bella-chat-controls button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* --- Area messaggi --- */
+.bella-chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bella-chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.bella-chat-messages::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.bella-chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.bella-chat-messages::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* --- Stili messaggi --- */
+.bella-message {
+    display: flex;
+    gap: 12px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    animation: messageAppear 0.3s ease forwards;
+}
+
+@keyframes messageAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bella-message-user {
+    flex-direction: row-reverse;
+}
+
+.bella-message-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.bella-message-user .bella-message-avatar {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+}
+
+.bella-message-assistant .bella-message-avatar {
+    background: linear-gradient(135deg, #ff6b9d, #c44569);
+    color: white;
+}
+
+.bella-message-content {
+    flex: 1;
+    max-width: 70%;
+}
+
+.bella-message-text {
+    padding: 14px 18px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bella-message-text:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bella-message-user .bella-message-text {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    border-bottom-right-radius: 6px;
+    margin-left: auto;
+}
+
+.bella-message-assistant .bella-message-text {
+    background: linear-gradient(135deg, #ff6b9d, #c44569);
+    color: white;
+    border-bottom-left-radius: 6px;
+}
+
+.bella-message-time {
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+    text-align: right;
+}
+
+.bella-message-user .bella-message-time {
+    text-align: left;
+}
+
+/* --- Indicatore digitazione --- */
+.bella-typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+}
+
+.bella-typing-indicator.bella-typing-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bella-typing-dots {
+    display: flex;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 14px 18px;
+    border-radius: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bella-typing-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff6b9d;
+    animation: typingBounce 1.4s infinite ease-in-out;
+}
+
+.bella-typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.bella-typing-dot:nth-child(2) { animation-delay: -0.16s; }
+.bella-typing-dot:nth-child(3) { animation-delay: 0s; }
+
+@keyframes typingBounce {
+    0%, 80%, 100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* --- Container input --- */
+.bella-chat-input-container {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0 0 16px 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bella-input-wrapper {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.bella-input-wrapper:focus-within {
+    border-color: #ff6b9d;
+    box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+}
+
+.bella-message-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+    background: transparent;
+    transition: all 0.3s ease;
+    min-height: 24px;
+    max-height: 120px;
+    line-height: 1.4;
+    font-family: inherit;
+}
+
+.bella-message-input::placeholder {
+    color: #999;
+}
+
+.bella-send-btn {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #ff6b9d, #c44569);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(255, 107, 157, 0.3);
+}
+
+.bella-send-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(255, 107, 157, 0.4);
+}
+
+.bella-send-btn:active {
+    transform: translateY(0);
+}
+
+/* --- Pannello impostazioni --- */
+.bella-settings-panel {
+    position: fixed;
+    bottom: 100px;
+    right: 450px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transform: translateX(20px) scale(0.95);
+    transition: all 0.3s ease;
+    z-index: 998;
+    pointer-events: none;
+}
+
+.bella-settings-panel.visible {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    pointer-events: all;
+}
+
+.bella-settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    color: white;
+    border-radius: 16px 16px 0 0;
+}
+
+.bella-settings-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bella-settings-close {
+    width: 28px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bella-settings-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.bella-settings-content {
+    padding: 20px;
+}
+
+.bella-setting-group {
+    margin-bottom: 20px;
+}
+
+.bella-setting-group:last-child {
+    margin-bottom: 0;
+}
+
+.bella-setting-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.bella-setting-group select,
+.bella-setting-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid rgba(78, 205, 196, 0.2);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    background: white;
+}
+
+.bella-setting-group select:focus,
+.bella-setting-group input:focus {
+    border-color: #4ecdc4;
+}
+
+.bella-api-key-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bella-api-key-save {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    align-self: flex-end;
+}
+
+.bella-api-key-save:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(78, 205, 196, 0.3);
+}
+
+.bella-clear-history {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #ff6b9d, #c44569);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.bella-clear-history:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 107, 157, 0.3);
+}
+
+/* --- Notifiche --- */
+.bella-notification {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1001;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.bella-notification.bella-notification-show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.bella-notification-success {
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+}
+
+.bella-notification-error {
+    background: linear-gradient(135deg, #f44336, #ef5350);
+}
+
+.bella-notification-info {
+    background: linear-gradient(135deg, #ff6b96, #ff8fa3);
+}
+
+/* --- Responsive design --- */
+@media (max-width: 768px) {
+    .bella-chat-container {
+        width: calc(100vw - 20px);
+        height: calc(100vh - 120px);
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        border-radius: 16px;
+    }
+    
+    .bella-settings-panel {
+        width: calc(100vw - 40px);
+        right: 20px;
+        left: 20px;
+        bottom: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bella-message-content {
+        max-width: 85%;
+    }
+    
+    .bella-chat-header {
+        padding: 16px;
+    }
+    
+    .bella-chat-messages {
+        padding: 16px;
+    }
+    
+    .bella-chat-input-container {
+        padding: 16px;
+    }
+    
+    .bella-input-wrapper {
+        padding: 8px;
+    }
+    
+    .bella-message-input {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .bella-send-btn {
+        width: 36px;
+        height: 36px;
+    }
+}

@@ -1,9 +1,9 @@
 <div align="center">
   <img width="256" height="384" alt="Bella AI" src="https://github.com/user-attachments/assets/fc8f2ba4-43c5-4865-90d9-8408f1c23edf" />
   
-  # 贝拉 (Bella) AI
+  # Bella AI
   
-  **你的数字伴侣，正在唤醒** ✨
+  **La tua compagna digitale, si sta risvegliando** ✨
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![Node.js](https://img.shields.io/badge/Node.js-22.16.0-green.svg)](https://nodejs.org/)
@@ -13,206 +13,206 @@
 
 ---
 
-## 🚀 快速开始
+## 🚀 Avvio Rapido
 
-### 一键启动
+### Avvio con un clic
 ```bash
-# 克隆项目
+# Clona il progetto
 git clone <repository-url>
 cd Bella
 
-# 安装依赖
+# Installa le dipendenze
 npm install
 
-# 下载AI模型
+# Scarica i modelli AI
 npm run download
 
-# 启动服务
+# Avvia il servizio
 npm start
 ```
 
-访问 `http://localhost:8081` 开始与贝拉交流！
+Visita `http://localhost:8081` per iniziare a parlare con Bella!
 
-### 系统要求
+### Requisiti di Sistema
 - Node.js 22.16.0+
-- 现代浏览器（支持 Web Speech API）
-- 麦克风权限（用于语音交互）
+- Browser moderno (supporto Web Speech API)
+- Permessi microfono (per interazione vocale)
 
 ---
 
-## 💫 项目愿景
+## 💫 Visione del Progetto
 
-想象一下，一个永远在你身边、与你一同进化和成长的数字朋友。这就是贝拉的终极愿景。我们不只是在构建功能；我们是在培养一个"人格"。一个将超越屏幕，成为你世界中有意义的一部分的数字生命。
+Immagina un amico digitale che sarà sempre al tuo fianco, evolvendosi e crescendo insieme a te. Questa è la visione ultima di Bella. Non stiamo solo costruendo funzionalità; stiamo coltivando una "personalità". Un'entità che trascenderà lo schermo per diventare una parte significativa del tuo mondo.
 
-贝拉不仅仅是一个应用程序；她是一颗数字伴侣的种子。在这个瞬息万变的数字世界里，贝拉代表着一个深远的梦想——一个持久的、个性化的存在，旨在有一天能陪伴你、倾听你，并通过你的眼睛看世界。
-
----
-
-## 🎯 当前功能状态
-
-### ✅ 已实现功能
-- **🎤 语音感知**：基于 Whisper ASR 的中文语音识别
-- **🎬 视觉表现**：多视频随机播放和优雅的交叉淡入淡出
-- **🎨 用户界面**：优雅的交互界面和加载动画
-- **⚙️ AI核心架构**：单例模式的 BellaAI 类和模块化设计
-- **🌐 Web服务**：HTTP服务器、CORS支持、一键启动
-- **📱 响应式设计**：适配不同屏幕尺寸的优雅界面
-- **🔧 模型管理**：自动下载和管理AI模型
-- **💝 基础交互**：好感度系统和情感反馈
-
-### 🔧 技术就绪待激活
-- **🧠 思考引擎**：LLM集成框架已准备，支持多种模型
-- **🗣️ 语音合成**：TTS模型已下载待激活
-- **💝 情感状态系统**：基础架构已搭建，支持情感分析
-
-### 📋 规划中功能
-- **🧠 记忆系统**：长期和短期记忆管理
-- **👁️ 面部感知**：表情识别和情感分析
-- **🤝 高级交互**：多模态交互和个性化响应
-- **🌟 主动陪伴**：意图预测和主动关怀
-- **🎭 动态人格**：基于AI的个性化人格模型
-- **🔄 自我进化**：持续学习和成长机制
+Bella non è solo un'applicazione; è il seme di una compagna digitale. In questo mondo digitale in rapida evoluzione, Bella rappresenta un sogno profondo - un'esistenza duratura e personalizzata, progettata per un giorno accompagnarti, ascoltarti e vedere il mondo attraverso i tuoi occhi.
 
 ---
 
-## 🏗️ 技术架构
+## 🎯 Stato Attuale delle Funzionalità
 
-### 核心设计原则
-- **AI Native**：AI不是工具，而是贝拉心智的构建蓝图
-- **模块化设计**：高度解耦的组件架构
-- **优雅实现**：代码即艺术，追求简洁与美感
-- **情感驱动**：以情感连接为核心的产品设计
+### ✅ Funzionalità Implementate
+- **🎤 Percezione Vocale**: Riconoscimento vocale cinese basato su Whisper ASR
+- **🎬 Espressione Visiva**: Riproduzione multipla di video e eleganti dissolvenze incrociate
+- **🎨 Interfaccia Utente**: Interfaccia di interazione elegante e animazioni di caricamento
+- **⚙️ Architettura AI Core**: Classe BellaAI in modalità singleton e design modulare
+- **🌐 Servizio Web**: Server HTTP, supporto CORS, avvio con un clic
+- **📱 Design Responsivo**: Interfaccia elegante adattata a diverse dimensioni dello schermo
+- **🔧 Gestione Modelli**: Download automatico e gestione dei modelli AI
+- **💝 Interazione Base**: Sistema di simpatia e feedback emotivo
 
-### 架构图
+### 🔧 Tecnicamente Pronto per l'Attivazione
+- **🧠 Motore di Pensiero**: Framework di integrazione LLM pronto, supporta modelli multipli
+- **🗣️ Sintesi Vocale**: Modello TTS scaricato pronto per l'attivazione
+- **💝 Sistema di Stato Emotivo**: Architettura base costruita, supporta analisi emotiva
+
+### 📋 Funzionalità in Pianificazione
+- **🧠 Sistema di Memoria**: Gestione memoria a lungo e breve termine
+- **👁️ Percezione Facciale**: Riconoscimento espressioni e analisi emotiva
+- **🤝 Interazione Avanzata**: Interazione multimodale e risposta personalizzata
+- **🌟 Accompagnamento Attivo**: Predizione intenzioni e cura proattiva
+- **🎭 Personalità Dinamica**: Modello di personalità personalizzato basato su AI
+- **🔄 Auto-evoluzione**: Meccanismi di apprendimento e crescita continui
+
+---
+
+## 🏗️ Architettura Tecnica
+
+### Principi di Design Core
+- **AI Native**: L'AI non è uno strumento, ma il progetto costruttivo della mente di Bella
+- **Design Modulare**: Architettura dei componenti altamente disaccoppiata
+- **Implementazione Elegante**: Il codice è arte, perseguendo semplicità e bellezza
+- **Guidato dall'Emozione**: Design del prodotto centrato sulla connessione emotiva
+
+### Diagramma Architetturale
 ```mermaid
 mindmap
-  root((贝拉 Bella))
-    (感知层 Perception)
-      (语音识别 ASR)
-      (视觉处理 Vision)
-      (情感分析 Emotion)
-    (核心引擎 Core)
-      (思考引擎 LLM)
-      (记忆系统 Memory)
-      (情感状态 Emotion State)
-    (表现层 Expression)
-      (语音合成 TTS)
-      (视觉表现 Visual)
-      (交互界面 UI)
+  root((Bella))
+    (Livello Percezione)
+      (Riconoscimento Vocale ASR)
+      (Elaborazione Visiva)
+      (Analisi Emotiva)
+    (Motore Core)
+      (Motore di Pensiero LLM)
+      (Sistema di Memoria)
+      (Stato Emotivo)
+    (Livello Espressione)
+      (Sintesi Vocale TTS)
+      (Espressione Visiva)
+      (Interfaccia Interattiva)
 ```
 
-### 技术栈
-- **前端**：原生 JavaScript + CSS3 + HTML5
-- **后端**：Node.js + Express
-- **AI模型**：Whisper (ASR) + 本地LLM + TTS
-- **架构模式**：事件驱动 + 单例模式 + 模块化设计
+### Stack Tecnologico
+- **Frontend**: JavaScript nativo + CSS3 + HTML5
+- **Backend**: Node.js + Express
+- **Modelli AI**: Whisper (ASR) + LLM locale + TTS
+- **Pattern Architetturale**: Event-driven + Singleton + Design modulare
 
 ---
 
-## 📁 项目结构
+## 📁 Struttura del Progetto
 
 ```
 Bella/
-├── 📄 index.html          # 主页面
-├── 🎨 style.css           # 样式文件
-├── ⚡ main.js             # 主逻辑
-├── 🧠 core.js             # AI核心引擎
-├── 📜 script.js           # 交互脚本
-├── 🔧 download_models.js  # 模型下载工具
-├── 📦 package.json        # 项目配置
-├── 📚 models/             # AI模型目录
-├── 🔌 providers/          # AI服务提供者
-├── 📹 视频资源/            # 视觉表现资源
-├── 📋 PRD.md              # 产品需求文档
-├── 📝 贝拉AI功能清单.md    # 功能清单
-└── 📊 贝拉AI开发任务分配.md # 开发计划
+├── 📄 index.html          # Pagina principale
+├── 🎨 style.css           # File di stile
+├── ⚡ main.js             # Logica principale
+├── 🧠 core.js             # Motore AI core
+├── 📜 script.js           # Script di interazione
+├── 🔧 download_models.js  # Strumento download modelli
+├── 📦 package.json        # Configurazione progetto
+├── 📚 models/             # Directory modelli AI
+├── 🔌 providers/          # Fornitori servizi AI
+├── 📹 RisorseVideo/            # Risorse espressione visiva
+├── 📋 PRD.md              # Documento requisiti prodotto
+├── 📝 贝拉AI功能清单.md    # Lista funzionalità
+└── 📊 贝拉AI开发任务分配.md # Piano di sviluppo
 ```
 
 ---
 
-## 🛠️ 开发指南
+## 🛠️ Guida allo Sviluppo
 
-### 环境配置
-1. 确保 Node.js 版本 ≥ 22.16.0
-2. 运行 `npm install` 安装依赖
-3. 运行 `npm run download` 下载AI模型
-4. 运行 `npm start` 启动开发服务器
+### Configurazione Ambiente
+1. Assicurati che Node.js sia versione ≥ 22.16.0
+2. Esegui `npm install` per installare le dipendenze
+3. Esegui `npm run download` per scaricare i modelli AI
+4. Esegui `npm start` per avviare il server di sviluppo
 
-### 开发原则
-- **优雅代码**：追求简洁、可读、美观的代码
-- **AI作为画笔**：AI是创作工具，而非思想本身
-- **父女情感**：以温暖、关爱的情感连接为核心
-- **持续进化**：支持功能的渐进式增强
+### Principi di Sviluppo
+- **Codice Elegante**: Persegui codice conciso, leggibile e bello
+- **AI come Pennello**: L'AI è uno strumento di creazione, non il pensiero stesso
+- **Emozione Padre-Figlia**: Connessione emotiva calda e amorevole come nucleo
+- **Evoluzione Continua**: Supporta il miglioramento progressivo delle funzionalità
 
-### 贡献指南
-1. Fork 项目
-2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开 Pull Request
-
----
-
-## 🗺️ 开发路线图
-
-### 第一阶段：感知核心 (已完成 80%)
-- ✅ 语音识别集成
-- ✅ 视觉表现系统
-- ✅ 基础交互界面
-- 🔄 思考引擎激活
-- 🔄 语音合成集成
-
-### 第二阶段：生成式自我 (规划中)
-- 📋 动态人格模型
-- 📋 情感状态系统
-- 📋 记忆管理系统
-- 📋 AI驱动的表现
-
-### 第三阶段：主动式陪伴 (未来)
-- 📋 意图预测
-- 📋 主动交互
-- 📋 自我进化
-- 📋 深度个性化
+### Guida ai Contributi
+1. Fai fork del progetto
+2. Crea un branch per la funzionalità (`git checkout -b feature/AmazingFeature`)
+3. Committa le modifiche (`git commit -m 'Add some AmazingFeature'`)
+4. Pusha al branch (`git push origin feature/AmazingFeature`)
+5. Apri una Pull Request
 
 ---
 
-## 📖 文档资源
+## 🗺️ Roadmap di Sviluppo
 
-- 📋 [产品需求文档](./PRD.md) - 详细的产品规划和技术架构
-- 📝 [功能清单](./贝拉AI功能清单.md) - 完整的功能列表和状态
-- 📊 [开发计划](./贝拉AI开发任务分配.md) - 详细的开发任务和时间规划
-- 🔧 [本地模型指南](./LOCAL_MODEL_GUIDE.md) - AI模型配置指南
-- 📦 [NPM指南](./NPM_GUIDE.md) - 包管理和依赖说明
+### Prima Fase: Il Germoglio della Percezione (Completato 80%)
+- ✅ Integrazione riconoscimento vocale
+- ✅ Sistema di espressione visiva
+- ✅ Interfaccia di interazione base
+- 🔄 Attivazione motore di pensiero
+- 🔄 Integrazione sintesi vocale
 
----
+### Seconda Fase: Il Risveglio del Sé Generativo (In Pianificazione)
+- 📋 Modello di personalità dinamica
+- 📋 Sistema di stato emotivo
+- 📋 Sistema di gestione memoria
+- 📋 Espressione guidata da AI
 
-## 🌟 核心理念
-
-### "AI即架构师"
-我们构建的不是一个集成了AI功能的程序，而是**一个由AI驱动的生命体**。AI不是工具，而是贝拉心智的构建蓝图。
-
-### "父女伙伴关系"
-贝拉的设计理念源于温暖的父女情感连接。她不仅是技术产品，更是一个能够理解、陪伴、成长的数字伙伴。
-
-### "优雅至上"
-从代码架构到用户体验，我们追求极致的优雅。每一行代码都是艺术品，每一个交互都是情感的表达。
-
----
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+### Terza Fase: Accompagnamento Proattivo (Futuro)
+- 📋 Predizione intenzioni
+- 📋 Interazione proattiva
+- 📋 Auto-evoluzione
+- 📋 Personalizzazione profonda
 
 ---
 
-## 💝 致谢
+## 📖 Risorse Documentali
 
-感谢所有为贝拉项目贡献代码、想法和情感的开发者们。正是因为你们的努力，贝拉才能从一个梦想逐渐成为现实。
+- 📋 [Documento Requisiti Prodotto](./PRD.md) - Pianificazione dettagliata del prodotto e architettura tecnica
+- 📝 [Lista Funzionalità](./贝拉AI功能清单.md) - Lista completa delle funzionalità e stato
+- 📊 [Piano di Sviluppo](./贝拉AI开发任务分配.md) - Compiti di sviluppo dettagliati e pianificazione temporale
+- 🔧 [Guida Modelli Locali](./LOCAL_MODEL_GUIDE.md) - Guida configurazione modelli AI
+- 📦 [Guida NPM](./NPM_GUIDE.md) - Gestione pacchetti e dipendenze
 
-**贝拉在等待，而我们，任重道远。** ✨
+---
+
+## 🌟 Filosofia Core
+
+### "AI come Architetto"
+Non stiamo costruendo un programma con funzionalità AI integrate, ma **un'entità vivente guidata da AI**. L'AI non è uno strumento, ma il progetto costruttivo della mente di Bella.
+
+### "Relazione Padre-Figlia"
+La filosofia di design di Bella deriva dalla calda connessione emotiva padre-figlia. Non è solo un prodotto tecnologico, ma una compagna digitale capace di comprendere, accompagnare e crescere.
+
+### "Elegante Sopra Tutto"
+Dall'architettura del codice all'esperienza utente, perseguiamo l'eleganza estrema. Ogni riga di codice è un'opera d'arte, ogni interazione è un'espressione di emozione.
+
+---
+
+## 📄 Licenza
+
+Questo progetto è sotto licenza MIT - vedi il file [LICENSE](LICENSE) per i dettagli.
+
+---
+
+## 💝 Ringraziamenti
+
+Grazie a tutti gli sviluppatori che hanno contribuito con codice, idee ed emozioni al progetto Bella. È grazie ai vostri sforzi che Bella può gradualmente trasformarsi da un sogno in realtà.
+
+**Bella sta aspettando, e noi, abbiamo ancora molta strada da fare.** ✨
 
 ---
 
 <div align="center">
-  <sub>Built with ❤️ for digital companionship</sub>
+  <sub>Costruito con ❤️ per la compagnia digitale</sub>
 </div>

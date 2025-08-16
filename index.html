@@ -1,64 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bella - Your AI Companion</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="chatStyles.css">
-    <!-- 引入 Font Awesome 图标库，用于麦克风图标 -->
+    <title>Bella AI - La tua compagna digitale</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/chatStyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
-    <!-- 加载屏幕 -->
+    <!-- Schermata di caricamento -->
     <div id="loading-screen">
-        <img src="Bellaicon/Generated image.webp" alt="Loading Bella...">
+        <img src="assets/images/Bellaicon/Generated image.webp" alt="Caricamento Bella...">
+        <div class="loading-text">Bella si sta risvegliando...</div>
     </div>
 
-    <!-- 视频背景 -->
+    <!-- Video di sfondo -->
     <div class="video-container">
-        <video autoplay muted class="bg-video active" id="video1">
-            <source src="视频资源/3D 建模图片制作.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+        <video autoplay muted loop class="bg-video active" id="video1">
+            <source src="assets/videos/RisorseVideo/3D 建模图片制作.mp4" type="video/mp4">
+            Il tuo browser non supporta il tag video.
         </video>
-        <video muted class="bg-video" id="video2">
-            <source src="" type="video/mp4">
-            Your browser does not support the video tag.
+        <video muted loop class="bg-video" id="video2">
+            <source src="assets/videos/RisorseVideo/jimeng-2025-07-16-4437-比耶，然后微笑着优雅的左右摇晃.mp4" type="video/mp4">
+            Il tuo browser non supporta il tag video.
         </video>
     </div>
 
-    <!-- 内容层，覆盖在视频之上 -->
+    <!-- Contenuto principale -->
     <div class="content-overlay">
-
-        <!-- 语音识别结果显示区域 -->
+        <!-- Area risultati riconoscimento vocale -->
         <div class="transcript-container">
-            <p id="transcript"></p>
+            <p id="transcript">Ciao! Sono Bella, la tua compagna AI. Sono qui per chiacchierare e aiutarti! 💕</p>
         </div>
 
-        <!-- 底部麦克风和链接 -->
+        <!-- Barra inferiore con controlli -->
         <footer class="bottom-bar">
-            <button class="mic-button" id="mic-button" aria-label="Start Listening">
+            <button class="mic-button" id="mic-button" aria-label="Inizia ad ascoltare">
                 <i class="fas fa-microphone"></i>
             </button>
         </footer>
 
-        <!-- 聊天控制面板 -->
+        <!-- Pannello controllo chat -->
         <div class="chat-control-panel">
             <button id="chat-toggle-btn" class="control-btn primary">
                 <i class="fas fa-comments"></i>
-                <span>聊天</span>
+                <span>Chat</span>
             </button>
             <button id="chat-test-btn" class="control-btn secondary">
                 <i class="fas fa-paper-plane"></i>
-                <span>测试</span>
+                <span>Test</span>
             </button>
         </div>
-
     </div>
 
-    <script type="module" src="core.js"></script>
-    <script type="module" src="chatInterface.js"></script>
-    <script type="module" src="script.js"></script>
+    <!-- Script principale -->
+    <script type="module" src="src/main.js"></script>
 </body>
 </html>
